@@ -2,3 +2,12 @@ riskLANbasic.sublime-workspace
 
 node_modules
 
+package.json
+package-lock.json
+
+#VIM-filer
+.index.js.un~
+index.js~
+
+..gitignore.un~
+.gitignore~
