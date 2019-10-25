@@ -39,6 +39,11 @@ const Players = sequelize.define('players', {
     freezeTableName: true
 });
 
+//Hvis ikke tabellen finnes fra før:
+/** /Players.sync({
+    force: true
+});/**/
+
 //Fjern alle spillere ved oppstart:
 /**/
 console.log('Removing all players on startup');
@@ -180,6 +185,10 @@ app.delete('/api/removePlayer', (req, res) => {
         logErr(err);
         res.send('err');
     });
+});
+
+app.get('/jquery', (req, res) => {
+    res.sendFile(__dirname+'/node_modules/jquery/dist/jquery.min.js');
 });
 
 app.listen(port, () => console.log('RISK-LAN listening on port', port));
