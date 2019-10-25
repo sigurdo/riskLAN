@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>RISK-LAN/newIp</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="/jquery"></script>
+
+    <link rel="stylesheet" type="text/css" href="/css/general.css">
+    <style type="text/css">
+        #join {
+            color: blue;
+            text-decoration: underline;
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+    <div id="ramme" style="padding: 15px;">
+        Du er ikke med i pågående spill. Klikk <a id="join">her</a> for å bli det.
+    </div>
+
+    <script type="text/javascript">
+        $('#join').click(() => {
+            $.post(
+                '/api/join',
+                (data) => {
+                    window.location.replace('/');
+                }
+            );
+        });
+    </script>
+</body>
+</html>

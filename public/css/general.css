@@ -1,0 +1,53 @@
+html {
+    height: 100%;
+}
+
+body {
+    padding: 0px;
+    margin: 0px;
+    background-color: #222;
+    color: white;
+}
+
+#ramme {
+    border: 0px solid black;
+}
+
+h1 {
+    margin: 0px;
+    padding: 32px 16px 16px 16px;
+    background-color: #cc0000;
+    color: white;
+}
+
+#header {
+    text-decoration: none;
+}
+
+#about {
+    padding: 15px;
+}
+
+#listeModuler {
+    border-bottom: 5px solid black;
+    /** /border-left: 5px solid black;
+    border-right: 5px solid black;/**/
+    background-color: black;
+}
+
+#listeModuler a {
+    text-decoration: none;
+}
+
+.modul {
+    background-color: white;
+    font-size: 42px;
+    color: black;
+    padding: 15px;
+    border-top: 5px solid black;
+    opacity: 0.85;
+}
+
+.modul:hover {
+    opacity: 1;
+}

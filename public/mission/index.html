@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title> RISK-LAN/mission </title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="/jquery"></script>
+
+    <link rel="stylesheet" type="text/css" href="/css/general.css">
+</head>
+<body>
+    <div id="ramme">
+        <a href="/" id="header"><h1> RISK-LAN <br> /mission </h1></a>
+
+        <h2> Ditt oppdrag er: </h2>
+        <p id="oppdrag">
+
+        </p>
+    </div>
+
+    <script type="text/javascript">
+        function refresh() {
+            $.get(
+                '/api/joined',
+                (data) => {
+                    if (data == 'false') {
+                        window.location.replace('/newIp');
+                    }
+                }
+            );
+
+            $.get(
+                '/api/mission',
+                (data) => {
+                    $('#oppdrag').html(JSON.parse(data));
+                }
+            );
+        }
+
+        refresh();
+
+        window.setInterval(refresh, 1000);
+    </script>
+</body>
+</html>

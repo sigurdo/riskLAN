@@ -1,0 +1,290 @@
+html, body {
+	margin: 0px;
+	height: 100%;/*Tillater høydeflexing*/
+	background-color: #404040;
+	background-image: url("../media/bakgrunn.jpg");/*evt: https://i.imgur.com/oWg1SlN.jpg*/
+	background-size: 100%;
+	background-position: bottom;
+	background-repeat: no-repeat;
+	text-align: center;
+}
+
+#bakgrunnsmusikk {
+	position: absolute;
+	bottom: 0px;
+}
+
+.innhold {
+	height: 100%;
+	color: white;
+	width: 100%;
+}
+
+.bakgrunn {
+	position: fixed;
+	opacity: 0.6;
+}
+
+.forgrunnRamme {
+	position: absolute;
+	width: 100%;
+}
+
+.forgrunn {
+	/*position: fixed;*/
+	top: 0%;
+	width: 360px;
+}
+
+#angrepBakgrunn {
+	background-color: red;
+}
+
+#forsvarBakgrunn {
+	background-color: blue;
+}
+
+#angrepDiv, #forsvarDiv, #angrepBakgrunn, #forsvarBakgrunn {
+	height: 100%;
+}
+
+.justerAntall div {
+	font-size: 110%;
+	font-weight: bold;
+	font-family: calibri;
+	text-align: center;
+	margin: 4px;
+	padding: 4px 8px 4px 8px;
+	border-radius: 10%;
+	background-color: #048a77;
+	background-color: #26A69A;
+	cursor: pointer;
+	touch-action: zoom;
+}
+
+.vis {
+	display: block;
+	width: 60px;
+	color: white;
+	background-color: transparent;
+	border: none;
+	text-align: center;
+
+	font-family: times;
+	font-size: 294%;
+	margin: 8px;
+}
+
+/*Kode for å fjerne piler i input til visAngripere og visForsvarere. Den virker som den er litt buggete*/
+/*input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {*/
+    /* display: none; <- Crashes Chrome on hover */
+  /*  -webkit-appearance: none;
+    margin: 0; /* <-- Apparently some margin are still there even though it's hidden */
+/*}*/
+
+.velgTerninger select {
+	font-size: 24px;
+	width: 100%;
+	padding: 5px;
+}
+
+.velgTerninger option {
+	font-size: 8px;
+}
+
+.siste {
+	margin: 9px;
+	/**/height: 88px;/**/
+	/**/background-color: transparent;/**/
+	color: white;
+	font-size: 459%;
+	font-weight: bold;
+	text-align: center;
+}
+
+.visTerninger {
+	-webkit-flex-wrap: wrap;
+	flex-wrap: wrap;
+}
+
+.visTerninger img {
+	width: 25%;
+	margin: 4px;
+	background-color: white;
+	border-radius: 6px;
+}
+
+#stoppRamme {
+	position: absolute;
+	bottom: 18px;
+	width: 100%;
+}
+
+#stopp {
+	height: 100px;
+	border-radius: 50px;
+	background-color: #ff3232;
+	cursor: pointer;
+
+	font-size: 62px;
+	font-weight: bold;
+	font-family: 'arial';
+	color: white;
+	text-align: center;
+	padding: 15px 44px 15px 44px;
+}
+
+#angripRamme {
+	position: absolute;
+	bottom: 73px;
+	width: 100%;
+}
+
+#angrip {
+	/*width: 500px;*/
+	height: 92px;
+	/** /border: 5px solid #790820;/**/
+	border-radius: 46px;
+	background-color: #333;
+	cursor: pointer;
+
+	font-size: 62px;
+	font-weight: bold;
+	font-family: 'arial narrow';
+	color: white;
+	text-align: center;
+	padding: 8px 24px 8px 24px;
+}
+
+#blitzRamme {
+	position: absolute;
+	bottom: 4px;
+	width: 100%;
+}
+
+#blitz {
+	height: 66px;
+	/** /border: 5px solid #790820;/**/
+	border-radius: 33px;
+	background-color: #ff5722;
+	cursor: pointer;
+
+	font-size: 44px;
+	font-weight: bold;
+	font-family: 'arial narrow';
+	color: white;
+	text-align: center;
+	padding: 8px 22px 8px 22px;
+}
+
+#fullscreenIcon {
+	position: fixed;
+	top: 0px;
+	right: 0px;
+	margin: 2px;
+	padding: 4px;
+	height: 33px;
+	border-radius: 2px;
+	/*background-color: white;*/
+	cursor: pointer;
+}
+
+#varslinger {
+	position: absolute;
+	bottom: 0px;
+	width: 80%;
+	left: 10%;
+	background-color: grey;
+	opacity: 0.5;
+	font-size: 500%;
+}
+
+/*For desktop:* /
+@media only screen and (min-width: 981px) {
+	.justerAntall div {
+		font-size: 200%;
+	}
+
+	#visAngripere, #visForsvarere {
+		font-size: 500%;
+	}
+
+	.velgTerninger select {
+		font-size: 44px;
+	}
+
+	.siste {
+		font-size: 1000%;
+	}
+
+	#stopp {
+		font-size: 660%;
+	}
+
+	#angrip {
+		font-size: 400%;
+	}
+
+	#angripBlitz {
+		font-size: 300%;
+	}
+
+	#varslinger {
+		font-size: 400%;
+	}
+}/**/
+
+
+h1 {
+	margin: 0px;
+	padding: 0px;/*Bytter avstand til padding fordi dette kan ødelegge høydeflexing*/
+	text-align: center;
+	font-size: 147%;
+}
+
+.header {
+	height: 12%;
+	font-size: 257%;
+	/**/background-color: white;/**/
+	color: white;
+}
+
+.ramme {
+	margin: 0px 10% 0px 10%;
+}
+
+.meny {
+	background-color: #bb6bce;
+}
+
+.meny a { /*Når man lager meny med denne stilen, blir a-tagen selv en block, med standard utseende*/
+			/*Bruk gjerne sammen med class vannrett*/
+	display: block;
+	text-decoration: none;
+	color: white;
+	padding: 25px;
+}
+
+.meny a:hover {
+	background-color: #824a90;
+}
+
+
+table, th, td {
+	border: 1px solid black;
+	border-collapse: collapse;
+}
+
+.vannrett { /*Dette vil si at alle med class vannrett i navnet sitt vil flexes vannrett*/
+	display: -webkit-flex;
+	display: flex;
+	-webkit-flex-direction: row;
+	flex-direction: row;
+	-webkit-justify-content: center;
+	justify-content: center;
+	-webkit-align-items: center;
+	align-items: center;
+	/*-webkit-flex-wrap: wrap;
+	flex-wrap: wrap;*/
+}

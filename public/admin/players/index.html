@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title> RISK-LAN/admin/players </title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="/jquery"></script>
+
+    <link rel="stylesheet" type="text/css" href="/css/general.css">
+    <link rel="stylesheet" type="text/css" href="players.css">
+</head>
+<body>
+    <div id="ramme">
+        <a href="/" id="header"><h1> RISK-LAN <br> /admin/players </h1></a>
+
+        <table id="playersTable">
+
+        </table>
+    </div>
+
+    <script type="text/javascript">
+        $('#playersTable').html('Halla jeg heter Petter');
+
+        function refresh() {
+            $.get('/api/players', (data) => {
+                //$('#playersTable').html(data);
+                data = JSON.parse(data);
+                let players = data.players;
+                let table = '<tr><th>IP</th><th>Fjern</th></tr>';
+
+                for (let i = 0; i < players.length; i++) {
+                    table += '<tr><td>'+players[i].ip+'</td><td><button class="fjern" onclick="remove(\''+players[i].ip+'\');">Fjern</button></td></tr>';
+                }
+
+                $('#playersTable').html(table);
+            });
+        }
+
+        function remove(ip) {
+            /*$.post('/api/removePlayer', {
+                ip: ip
+            });*/
+
+            $.ajax({
+                url: '/api/removePlayer',
+                data: {
+                    ip: ip
+                },
+                type: 'DELETE'
+            });
+        }
+
+        refresh();
+
+        window.setInterval(refresh, 1000);
+    </script>
+</body>
+</html>

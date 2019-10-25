@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title> RISK-LAN/territories </title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="/jquery"></script>
+
+    <link rel="stylesheet" type="text/css" href="/css/general.css">
+</head>
+<body>
+    <div id="ramme">
+        <a href="/" id="header"><h1> RISK-LAN <br> /territories</h1></a>
+        
+        <ul id="liste">
+            
+        </ul>
+    </div>
+
+    <script type="text/javascript">
+        function refresh() {
+            $.get(
+                '/api/joined',
+                (data) => {
+                    if (data == 'false') {
+                        window.location.replace('/newIp');
+                    }
+                }
+            );
+            
+            $.get(
+                '/api/territories',
+                (data) => {
+                    $('#liste').empty();
+                    data = JSON.parse(data);
+                    territories = data.territories;
+                    for (let i = 0; i < territories.length; i++) {
+                        $('#liste').append('<li>'+territories[i]+'</li>');
+                    }
+                }
+            );
+        }
+
+        refresh();
+
+        window.setInterval(refresh, 1000);
+    </script>
+</body>
+</html>

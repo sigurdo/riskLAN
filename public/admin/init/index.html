@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title> RISK-LAN/admin/init </title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="/jquery"></script>
+
+    <link rel="stylesheet" type="text/css" href="/css/general.css">
+    <link rel="stylesheet" type="text/css" href="/css/init.css">
+</head>
+<body>
+    <div id="ramme">
+        <a href="/" id="header"><h1> RISK-LAN <br> /admin/init </h1></a>
+
+        <form method="post" action="/api/init" id="initForm">
+            Kart:
+            <select name="kart" id="kartInput">
+            </select>
+
+            <input type="submit" name="submit" value="Start">
+        </form>
+    </div>
+
+    <script type="text/javascript">
+        $.get(
+            '/api/maps',
+            (data) => {
+                data = JSON.parse(data);
+                console.log(data);
+                let ting = ''
+                for (let index in data) {
+                    ting += '<option value="'+index+'">'+index+'</option>'
+                }
+                $('#kartInput').html(ting);
+            }
+        );
+    </script>
+</body>
+</html>

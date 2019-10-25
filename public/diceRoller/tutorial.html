@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title> Tutorial - RISK Dice Roller </title>
+		<link rel="stylesheet" type="text/css" href="css/grid.css">
+		<link rel="stylesheet" type="text/css" href="css/tutorial.css">
+
+		<script src="js/sigurdsStandardFunksjoner.js"></script><!--Script med noen nyttige funksjoner-->
+	</head>
+
+	<body>
+		<img src="media/s1.png">
+		<img src="media/s2.png">
+		<img src="media/s3.png">
+		<img src="media/s4.png">
+		<img src="media/s5.png">
+		<img src="media/s6.png">
+		<img src="media/s7.png">
+
+		<script type="text/javascript">
+			var imgEl = document.querySelectorAll('img');
+			for (var i = imgEl.length - 1; i >= 0; i--) {
+				imgEl[i].width = window.innerWidth - 28;
+			}
+		</script>
+	</body>
+</html>

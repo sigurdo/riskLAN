@@ -1,0 +1,57 @@
+html, body {
+	margin: 0px;
+	height: 100%;/*Tillater høydeflexing*/
+	background-color: black;
+}
+
+h1 {
+	margin: 0px;
+	padding: 25px 10px 25px 10px;/*Bytter avstand til padding fordi dette kan ødelegge høydeflexing*/
+}
+
+h2, h3, h4, h5, h6  {
+	margin: 0px;
+	padding: 15px 0px 15px 0px;/*Bytter avstand til padding fordi dette kan ødelegge høydeflexing*/
+}
+
+img {
+	display: block;
+	margin: 6px;
+}
+
+#ramme {/*Hvis man putter et div-element med id="ramme" i body, og gir body class="vannrett" blir hele nettsida midtstilt*/
+	margin: 0px 0px 0px 0px;
+}
+
+.meny {
+	background-color: #bb6bce;
+}
+
+.meny a { /*Når man lager meny med denne stilen, blir a-tagen selv en block, med standard utseende*/
+			/*Bruk gjerne sammen med class vannrett*/
+	display: block;
+	text-decoration: none;
+	color: white;
+	padding: 25px;
+}
+
+.meny a:hover {
+	background-color: #824a90;
+}
+
+
+table, th, td {
+	border: 1px solid black;
+	border-collapse: collapse;
+}
+
+.vannrett { /*Dette vil si at alle med class vannrett i navnet sitt vil flexes vannrett*/
+	display: -webkit-flex;
+	display: flex;
+	-webkit-flex-direction: row;
+	flex-direction: row;
+	-webkit-justify-content: center;
+	justify-content: center;
+	-webkit-flex-wrap: wrap;
+	flex-wrap: wrap;
+}

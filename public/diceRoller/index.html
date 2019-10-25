@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title> RISK Dice Roller </title>
+		<link rel="icon" href="media/favicon.ico">
+
+		<!----><meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=0"><!---->
+		
+		<link rel="stylesheet" type="text/css" href="css/grid.css">
+		<link rel="stylesheet" type="text/css" href="css/riskDiceRoller.css">
+
+		<script type="text/javascript" src="js/sigurdsStandardFunksjoner.js"></script>
+	</head>
+
+	<body>
+		<!--- -><h1 class="header"> RISK Dice Roller </h1><!---->
+
+		<!--Dette er bakgrunn-->
+		<div class="row innhold bakgrunn">
+			<div class="col-6" id="angrepBakgrunn"></div>
+			<div class="col-6" id="forsvarBakgrunn"></div>
+		</div>
+
+		<!--Her starter faktisk innhold-->
+		<div class="vannrett forgrunnRamme">
+			<div class="row innhold forgrunn">
+				<div class="col-6" id="angrepDiv">
+					<h1> Angriper </h1>
+					<div class="antall vannrett">
+						<div class="justerAntall">
+							<div onclick="juster(0, -1, false);"> -1 </div>
+							<div onclick="juster(0, -5, false);"> -5 </div>
+						</div>
+
+						<input type="number" id="vis0" class="vis" oninput="angripereInput();">
+
+						<div class="justerAntall">
+							<div onclick="juster(0, +1, false);"> +1 </div>
+							<div onclick="juster(0, +5, false);"> +5 </div>
+						</div>
+					</div>
+
+					<div class="velgTerninger">
+						<select id="antallTerninger0"><!--
+							<option value="3" id="antallTerninger03"> 3 Terninger </option>
+							<option value="2" id="antallTerninger02"> 2 Terninger </option>
+							<option value="1" id="antallTerninger01"> 1 Terning </option>-->
+						</select>
+					</div>
+
+					<div id="angrepPagar0">
+						<div class="siste" id="siste0"></div>
+
+						<div class="visTerninger vannrett" id="visTerninger0">
+							<img src="" id="a1"><img src="" id="a2"><img src="" id="a3">
+						</div>
+					</div>
+				</div>
+
+				<div class="col-6" id="forsvarDiv">
+					<h1> Forsvarer </h1>
+					<div class="antall vannrett">
+						<div class="justerAntall">
+							<div onclick="juster(1, -1, false);"> -1 </div>
+							<div onclick="juster(1, -5, false);"> -5 </div>
+						</div>
+
+						<input type="number" id="vis1" class="vis" oninput="forsvarereInput();">
+
+						<div class="justerAntall">
+							<div onclick="juster(1, +1, false);"> +1 </div>
+							<div onclick="juster(1, +5, false);"> +5 </div>
+						</div>
+					</div>
+
+					<div class="velgTerninger">
+						<select id="antallTerninger1"><!--
+							<option value="2" id="antallTerninger12"> 2 Terninger </option>
+							<option value="1" id="antallTerninger11"> 1 Terning </option>-->
+						</select>
+					</div>
+
+					<div id="angrepPagar1">
+						<div class="siste" id="siste1"></div>
+
+						<div class="visTerninger vannrett" id="visTerninger1">
+							<img src="" id="f1">
+							<img src="" id="f2">
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+
+		<div class="vannrett" id="angripRamme"><div id="angrip" onclick="angrip();"> ANGRIP </div></div>
+		<div class="vannrett" id="blitzRamme"><div id="blitz" onclick="sporBlitz();"> BLITZ </div></div>
+		<div class="vannrett" id="stoppRamme"><div id="stopp" onclick="stopp();" style="display: none;"> STOPP </div></div>
+		<div id="varslinger"></div>
+
+		<!---->
+		<audio loop id="bakgrunnsmusikk">
+			<source src="media/gloriousMorning.mp3" type="audio/mpeg">
+			<!--evt (merkbart dårligere lyd): - -><source src="https://vocaroo.com/media_command.php?media=s0zHKBKsCPTK&command=download_mp3" type="audio/mpeg"><!---->
+		</audio>
+		<!---->
+
+		<!--Setter fullskjerm-->
+		<img src="media/fullscreen.png" id="fullscreenIcon">
+		<script type="text/javascript">
+			var fullscreenIcon = document.querySelector("#fullscreenIcon");
+
+			function maksimer(e) {
+				document.documentElement.webkitRequestFullscreen();
+			}
+
+			fullscreenIcon.addEventListener("click", maksimer);
+		</script>
+
+		<!--Alle viktige funksjoner-->
+		<script type="text/javascript" src="js/generelleFunksjoner.js"></script>
+
+		<!--Dette scriptet er hovedscriptet som starter alt-->
+		<script type="text/javascript" src="js/oppstart.js"></script>
+	</body>
+</html>

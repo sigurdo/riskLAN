@@ -1,0 +1,102 @@
+html, body {
+	margin: 0px;
+	height: 100%;/*Tillater høydeflexing*/
+}
+
+h1 {
+	font-size: 400%;
+	margin: 0px;
+	padding: 25px 10px 25px 10px;/*Bytter avstand til padding fordi dette kan ødelegge høydeflexing*/
+	text-align: center;
+	/*font-size: 400%;*/
+}
+
+.ramme {
+	margin: 0px 10% 0px 10%;
+}
+
+.header {
+	height: 12%;
+	background-color: white;
+	color: black;
+}
+
+h2 {
+	font-size: 400%;
+	cursor: pointer;
+}
+
+.skjema {
+	display: block;
+}
+
+#defMinAng {
+	width: 150px;
+}
+
+#valgVentetid th {
+	font-size: 48px;
+	padding: 8px;
+}
+
+#valgVentetid {
+	width: 100%;
+}
+
+#valgVentetid td {
+	height: 100px;
+	text-align: center;
+}
+
+#valgVentetid input[type="text"] {
+	width: 350px;
+	height: 100%;
+}
+
+#valgVentetid input[type="number"] {
+	width: 200px;
+	height: 100%;
+}
+
+#defValgVentetidBilde, .slettValgVentetidBilde, #leggTilValgVentetidBilde {
+	height: 100%;
+}
+
+#bruk, #tilbakestill {
+	font-size: 72px;
+}
+
+.meny {
+	background-color: #bb6bce;
+}
+
+.meny a { /*Når man lager meny med denne stilen, blir a-tagen selv en block, med standard utseende*/
+			/*Bruk gjerne sammen med class vannrett*/
+	display: block;
+	text-decoration: none;
+	color: white;
+	padding: 25px;
+}
+
+.meny a:hover {
+	background-color: #824a90;
+}
+
+
+table, th, td {
+	border: 1px solid black;
+	border-collapse: collapse;
+}
+
+.vannrett { /*Dette vil si at alle med class vannrett i navnet sitt vil flexes vannrett*/
+	display: -webkit-flex;
+	display: flex;
+	-webkit-flex-direction: row;
+	flex-direction: row;
+	-webkit-justify-content: center;
+	justify-content: center;
+	-webkit-align-items: top;
+	align-items: top;
+	/*-webkit-flex-wrap: wrap;
+	flex-wrap: wrap;*/
+}

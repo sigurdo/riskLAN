@@ -1,0 +1,11 @@
+#initForm {
+    padding: 25px;
+    font-size: 36px;
+    max-width: 480px;
+}
+
+#initForm > select, #initForm > input[type="submit"] {
+    width: 100%;
+    font-size: 48px;
+    margin-bottom: 25px;
+}

@@ -1,0 +1,21 @@
+.skjema label {/*Denne stilsettinga baserer seg på at man putter både input-elementet og tekst/bilder som hører til sammmen i label. Da legger forskjellige valg seg pent under hverandre*/
+	display: block;
+	font-size: 72px;
+}
+
+.skjema input[type="radio"], input[type="checkbox"] {
+	width: 48px;
+	height: 48px;
+}
+
+.skjema input {
+	font-size: 72px;/*Deilig med litt ekstra store input-felt*/
+}
+
+.skjema select {
+	font-size: 72px;/*Samme*/
+}
+
+.skjema {
+	font-size: 72px;
+}
