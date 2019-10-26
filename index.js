@@ -140,7 +140,7 @@ app.get('/api/mission', (req, res) => {
 
 //Initialiserer et nytt spill med kartet gitt i data-feltet
 app.post('/api/init', (req, res) => {
-    console.log('Initializing game with options', req.body);
+    console.log('Game initialized by', req.ip, req.body);
     mixTerritories.mixTerritories(Players, req.body.kart);
     mixMissions.mixMissions(Players, req.body.kart);
 
@@ -174,7 +174,7 @@ app.get('/api/players', (req, res) => {
 
 //Fjerner ip-en gitt ved data-feltet
 app.delete('/api/removePlayer', (req, res) => {
-    console.log('Removing player:', req.body);
+    console.log('Player removed by', req.ip, req.body);
     Players.destroy({
         where: {
             ip: req.body.ip

@@ -46,12 +46,20 @@ const maps = {
         ],
 
         missions: [
-            'Utslett gul',
-            'Utslett rød',
-            'Utslett blå',
-            'Utslett grønn',
-            'Utslett lilla',
-            'Utslett svart'
+            '<p>Du må eliminere alle de GRØNNE BATALJONENE</p> <p>Hvis du selv kontrollerer de grønne bataljonene eller de allerede er blitt eliminert av en annen spiller er ditt oppdrag:</p> <p>Du skal KONTROLLERE 24 OMRÅDER.</p>',
+            '<p>Du må eliminere alle de FIOLETTE BATALJONENE</p> <p>Hvis du selv kontrollerer de fiolette bataljonene eller de allerede er blitt eliminert av en annen spiller er ditt oppdrag:</p> <p>Du skal KONTROLLERE 24 OMRÅDER.</p>',
+            '<p>Du må eliminere alle de GULE BATALJONENE</p> <p>Hvis du selv kontrollerer de gule bataljonene eller de allerede er blitt eliminert av en annen spiller er ditt oppdrag:</p> <p>Du skal KONTROLLERE 24 OMRÅDER.</p>',
+            '<p>Du må eliminere alle de SVARTE BATALJONENE</p> <p>Hvis du selv kontrollerer de svarte bataljonene eller de allerede er blitt eliminert av en annen spiller er ditt oppdrag:</p> <p>Du skal KONTROLLERE 24 OMRÅDER.</p>',
+            '<p>Du må eliminere alle de BLÅ BATALJONENE</p> <p>Hvis du selv kontrollerer de blå bataljonene eller de allerede er blitt eliminert av en annen spiller er ditt oppdrag:</p> <p>Du skal KONTROLLERE 24 OMRÅDER.</p>',
+            '<p>Du må eliminere alle de RØDE BATALJONENE</p> <p>Hvis du selv kontrollerer de røde bataljonene eller de allerede er blitt eliminert av en annen spiller er ditt oppdrag:</p> <p>Du skal KONTROLLERE 24 OMRÅDER.</p>',
+            '<p>Du skal erobre EUROPA og SYD-AMERIKA og et tredje kontinent som du velger selv.</p>',
+            '<p>Du skal erobre ASIA og AFRIKA</p>',
+            '<p>Du må erobre hele ASIA og SYD-AMERIKA</p>',
+            '<p>Du skal erobre 24 OMRÅDER hvor som helst på brettet.</p>',
+            '<p>Du skal erobre 18 OMRÅDER etter fritt valg og ha minst to bataljoner i hvert område.</p>',
+            '<p>Du skal erobre NORD-AMERIKA og AFRIKA</p>',
+            '<p>Du må erobre kontinentene EUROPA og AUSTRALIA pluss et valgfritt kontinent.</p>',
+            '<p>Du skal erobre NORD-AMERIKA og AUSTRALIA</p>'
         ]
     },
 
