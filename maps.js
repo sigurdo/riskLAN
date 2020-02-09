@@ -234,12 +234,19 @@ const maps = {
         ],
 
         missions: [
-            'Utslett gul',
-            'Utslett rød',
-            'Utslett blå',
-            'Utslett grønn',
-            'Utslett lilla',
-            'Utslett svart'
+            '<p>Utslett gul</p><p>else { 20 områder }</p>',
+            '<p>Utslett rød</p><p>else { 20 områder }</p>',
+            '<p>Utslett blå</p><p>else { 20 områder }</p>',
+            '<p>Utslett grønn</p><p>else { 20 områder }</p>',
+            '<p>Utslett lilla</p><p>else { 20 områder }</p>',
+            '<p>Utslett svart</p><p>else { 20 områder }</p>',
+            'Byåsen, Lade og ett valgfritt',
+            'Midtbyen, Nardo og ett valgfri tt',
+            'Strinda, Elgeseter og ett valgfritt',
+            '18 valgfri områder',
+            'Byåsen og Østbyen',
+            'Nidarvoll, Elgeseter og ett valgfritt',
+            'Østbyen, Nardo og ett valgfritt'
         ]
     }
 };

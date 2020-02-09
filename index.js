@@ -13,7 +13,7 @@ const app = express();
 const bodyParser = require('body-parser');
 app.use(bodyParser.urlencoded({extended: false}));
 app.use(express.static(__dirname + '/public'));
-const port = 8080;
+const port = 80;
 const path = require('path');
 
 const Sequelize = require('sequelize');
