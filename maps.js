@@ -248,6 +248,70 @@ const maps = {
             'Nidarvoll, Elgeseter og ett valgfritt',
             'Østbyen, Nardo og ett valgfritt'
         ]
+    },
+
+    Norden: {
+        territories: [
+            'Vestur',
+            'Akureyri',
+            'Reykjavik',
+            'Eyafjätlajökull',
+            'Færøyene',
+            'Nord-vestland',
+            'Sør-vestland',
+            'Agder',
+            'Telemark-vestfold',
+            'Viken',
+            'Innlandet',
+            'Trøndelag',
+            'Nordland',
+            's1',
+            's2',
+            's3',
+            's4',
+            'Troms',
+            'Finnmark',
+            's5',
+            's6',
+            's7',
+            's8',
+            's9',
+            's10',
+            's16',
+            's13',
+            's15',
+            'Småland',
+            'Halland',
+            'Skåne',
+            'Nord-Sjælland',
+            'Sør-Sjælland',
+            'Fyn',
+            'Hjørring',
+            'Ringkøbing',
+            'Vejle',
+            'Ribbe',
+            'f1',
+            'f2',
+            'f3',
+            'f4',
+            'f5',
+            'f6',
+            'f7',
+            'f8'
+        ],
+
+        missions: [
+            '<p>Utslett gul</p><p>else { 20 områder }</p>',
+            '<p>Utslett rød</p><p>else { 20 områder }</p>',
+            '<p>Utslett blå</p><p>else { 20 områder }</p>',
+            '<p>Utslett grønn</p><p>else { 20 områder }</p>',
+            '<p>Utslett lilla</p><p>else { 20 områder }</p>',
+            '<p>Utslett svart</p><p>else { 20 områder }</p>',
+            '<p>Hele Norge</p>',
+            '<p>Finland og Island</p>',
+            '<p>Hele Sverige</p>',
+            '<p>Danmark og Sameland</p>'
+        ]
     }
 };
 
