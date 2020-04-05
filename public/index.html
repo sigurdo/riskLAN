@@ -30,6 +30,24 @@
             .modul:hover {
                 opacity: 1;
             }
+
+            #turnTimer {
+                font-size: 76px;
+                text-align: center;
+            }
+
+            #turnMessage {
+                font-size: 24px;
+                padding: 15px;
+            }
+
+            #turnMessage[data-myTurn='true'] {
+                background-color: lime;
+            }
+
+            #turnMessage[data-myTurn='false'] {
+                background-color: red;
+            }
         </style>
 </head>
 <body>
@@ -59,14 +77,65 @@
         <div id="about">
             Dette er en fin app
         </div>
+
+        <div id="turn">
+            <div id="turnTimer">
+                5:00
+            </div>
+            <div id="turnMessage" data-myTurn="false">
+                Det er ikke din tur
+            </div>
+        </div>
+        
+        <script src="/socket.io/socket.io.js"></script>
+        <script>
+            function makeReadable(time) {
+                time /= 1000;
+                time = Math.floor(time);
+                let seconds = time % 60;
+                if (seconds < 10) seconds = `0${seconds}`;
+                time /= 60;
+                time = Math.floor(time);
+                let minutes = time;
+                return `${minutes}:${seconds}`;
+            }
+            function countDown() {
+                if (myTurn) $('#turnTimer').html(makeReadable(timeLeft - (new Date().getTime() - lastUpdate.getTime())));
+            }
+            function insertTimes(times) {
+                console.log('Nye tider:', times);
+                timeLeft = times[myIp];
+                myTurn = times.currentPlayer == myIp;
+                $('#turnTimer').html(makeReadable(timeLeft));
+                $('#turnMessage').html(myTurn ? 'Det er din tur' : 'Det er ikke din tur');
+                $('#turnMessage').attr('data-myTurn', myTurn);
+                lastUpdate = new Date();
+            }
+            setInterval(countDown, 200);
+            let myIp;
+            let timeLeft = 5 * 60 * 1000;
+            let myTurn = false;
+            let lastUpdate = new Date();
+            $.get('/api/joined', ip => {
+                myIp = ip;
+                $.get('/api/turn', insertTimes);
+            });
+            var socket = io();
+            $('#turn').on('click', evt => {
+                console.log('click');
+                socket.emit('next', myIp);
+            });
+            socket.on('next', insertTimes);
+        </script>
     </div>
 
     <script type="text/javascript">
         function refresh() {
             $.get('/api/joined', (data) => {
                 if (data == 'false') {
-                    window.location.replace('/newIp');
+                    return window.location.replace('/newIp');
                 }
+                myIp = data;
             });
         }
 
