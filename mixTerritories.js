@@ -20,7 +20,14 @@ function mixTerritories(Players, mapName) {
         }
 
         for (let i = 0; i < map.length; i++) {
-            players[i%players.length].territories.push(map[i]);
+            players[i%players.length].territories.push({ name: map[i], troops: 1 });
+        }
+
+        for (let i = 0; i < players.length; i++) {
+            const totalTroops = [undefined, 60, 45, 35, 30, 25, 20][players.length];
+            for (let j = 0; j < totalTroops - players[i].territories.length; j++) {
+                players[i].territories[ssf.all.randInt(0, players[i].territories.length-1)].troops++;
+            }
         }
 
         for (let i = 0; i < players.length; i++) {

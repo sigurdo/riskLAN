@@ -34,7 +34,7 @@
                     data = JSON.parse(data);
                     territories = data.territories;
                     for (let i = 0; i < territories.length; i++) {
-                        $('#liste').append('<li>'+territories[i]+'</li>');
+                        $('#liste').append('<li>'+territories[i].name+', '+territories[i].troops+'</li>');
                     }
                 }
             );
