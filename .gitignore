@@ -3,9 +3,6 @@ riskLAN.sublime-workspace
 
 node_modules
 
-package.json
-package-lock.json
-
 #VIM-filer
 .index.js.un~
 index.js~
